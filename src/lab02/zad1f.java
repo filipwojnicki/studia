@@ -6,20 +6,20 @@ public class zad1f {
     }
 
     static String change(String str) {
-        String result = "";
+        StringBuffer result = new StringBuffer();
 
         for(int i = 0; i < str.length(); i++) {
             char c = str.charAt(i);
             
             if(Character.isUpperCase(c)) {
-                result += Character.toLowerCase(c);
+                result.append(Character.toLowerCase(c));
             } else if(Character.isLowerCase(c)) {
-                result += Character.toUpperCase(c);
+                result.append(Character.toUpperCase(c));
             } else {
-                result += c;
+                result.append(c);
             }
         }
 
-        return result;
+        return result.toString();
     }
 }
