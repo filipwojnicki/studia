@@ -1,4 +1,4 @@
-package lab03;
+package lab02;
 
 public class zad1b {
     public static void main(String[] args) {
@@ -22,5 +22,5 @@ public class zad1b {
         }
 
         return count;
-     }
+    }
 }

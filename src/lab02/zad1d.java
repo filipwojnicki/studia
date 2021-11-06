@@ -1,4 +1,4 @@
-package lab03;
+package lab02;
 
 public class zad1d {
     public static void main(String[] args) {
