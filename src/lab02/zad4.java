@@ -10,6 +10,8 @@ public class zad4 {
         System.out.println("N = ");
         BigInteger value = new BigInteger(userInput.next());
 
+        userInput.close();
+
         System.out.println(value.multiply(value));
 
 
