@@ -1,10 +1,11 @@
 package lab02;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class zad1e {
     public static void main(String[] args) {
-        System.out.println(where("Hello world world", "world");
+        System.out.println(Arrays.toString(where("Hello world world", "world")));
     }
 
     static int[] where(String str, String subStr) {
@@ -23,6 +24,12 @@ public class zad1e {
             positions.add(index);
         }
 
-        return positions.toArray(positions);
+        int[] result = new int[positions.size()];
+
+        for(int i = 0; i < positions.size(); i++) {
+            result[i] = positions.get(i);
+        }
+
+        return result;
     }
 }
