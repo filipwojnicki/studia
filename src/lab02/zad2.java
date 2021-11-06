@@ -16,6 +16,7 @@ public class zad2 {
             System.out.println("Podaj znak do zliczenia:");
             char c = userInput.next().charAt(0);
 
+            userInput.close();
 
             StringBuilder fileContent = new StringBuilder();
             Scanner fileInput = new Scanner(new FileReader(fileName)); //"test.txt"
@@ -23,6 +24,8 @@ public class zad2 {
             while(fileInput.hasNext()) {
                 fileContent.append(fileInput.next());
             }
+
+            fileInput.close();
 
             int charCount = zad1a.countChar(fileContent.toString(), c);
 
