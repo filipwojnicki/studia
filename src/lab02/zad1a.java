@@ -13,5 +13,5 @@ public class zad1a {
         }
 
         return count;
-     }
+    }
 }
