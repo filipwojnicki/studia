@@ -1,4 +1,4 @@
-package lab02;
+package lab02.napisy;
 
 public class zad1d {
     public static void main(String[] args) {

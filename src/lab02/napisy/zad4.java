@@ -1,4 +1,4 @@
-package lab02;
+package lab02.napisy;
 
 import java.math.BigInteger;
 import java.util.Scanner;
