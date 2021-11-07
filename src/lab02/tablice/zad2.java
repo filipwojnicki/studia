@@ -137,16 +137,14 @@ public class zad2 {
 
     public static void odwrocFragment(int tab[], int lewy, int prawy) {
         // System.out.println("orginal" + Arrays.toString(tab));
-        int i = lewy;
-        int j = prawy;
         int tmp;
 
-        while (j > i) {
-            tmp = tab[j];
-            tab[j] = tab[i];
-            tab[i] = tmp;
-            j--;
-            i++;
+        while (prawy > lewy) {
+            tmp = tab[prawy];
+            tab[prawy] = tab[lewy];
+            tab[lewy] = tmp;
+            prawy--;
+            lewy++;
         }
     }
 
