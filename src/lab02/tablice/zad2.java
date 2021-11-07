@@ -20,7 +20,7 @@ public class zad2 {
     public static int ileNieparzystych(int tab[]) {
         int count = 0;
 
-        for (int j = 2; j < tab.length; j++) {
+        for (int j = 0; j < tab.length; j++) {
             if(tab[j] % 2 != 0) count++;
         }
 
