@@ -10,12 +10,12 @@ public class zad1e {
 
     static int[] where(String str, String subStr) {
         ArrayList<Integer> positions = new ArrayList<Integer>();
-        int strLength = subStr.length();
+        int strLength = subStr.length() - 1;
 
-        int index = 0;
+        int index = -strLength; 
 
         while(true) {
-            index = str.indexOf(subStr, index == 0 ? 0 : index + strLength);
+            index = str.indexOf(subStr, index + strLength);
 
             if(index == -1) {
                 break;
