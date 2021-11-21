@@ -3,8 +3,6 @@ package lab02.napisy;
 import java.io.FileReader;
 import java.util.Scanner;
 
-import lab02.napisy.zad1a;
-
 public class zad2 {
     public static void main(String[] args) {
         try {
