@@ -13,5 +13,10 @@ public class NazwanyPunkt extends Punkt{
       System.out.println(name + ":<" + x() + ", " + y() + ">");
   }
 
+  @Override
+  public boolean equals(Object obj) {
+    return true;
+  }
+
   private String name;
 }
