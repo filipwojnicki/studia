@@ -1,7 +1,9 @@
 package lab04.z06;
 
 import java.util.Date;
-import java.util.GregorianCalendar;
+// import java.util.GregorianCalendar;
+import java.time.LocalDate;
+
 
 public class zad1 {
     public static void main(String[] args)
@@ -40,8 +42,8 @@ class Employee
         this.name = name;
         this.salary = salary;
 
-        GregorianCalendar calendar = new GregorianCalendar(year, month - 1, day);
-        hireDay = calendar.getTime();
+        LocalDate calendar = LocalDate.of(year, month, day);
+        hireDay = java.sql.Date.valueOf(calendar);
 
         // Dodane w stosunku do poprzedniej wersji
         id = nextId;
