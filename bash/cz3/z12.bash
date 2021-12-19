@@ -17,8 +17,8 @@ while IFS=${separator} read line; do
   numbers=($line)
 
   if [[ ${numbers[0]} -gt ${numbers[1]} ]]; then 
-    echo ${numbers[0]}$separator${numbers[1]} >> resultFile
+    echo ${numbers[0]}$separator${numbers[1]} >> $resultFile
   else
-    echo ${numbers[1]}$separator${numbers[0]} >> resultFile
+    echo ${numbers[1]}$separator${numbers[0]} >> $resultFile
   fi
 done < $filename
