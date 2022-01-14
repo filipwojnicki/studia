@@ -9,7 +9,7 @@ if [ ! -d $1 ]; then
 fi
 
 for filename in $1/*; do
-  byteCount=$(echo "$filename" | wc -c) # macos -c listuje bajty
+  byteCount=$(cat "$filename" | wc -c) # macos -c listuje bajty
   byteSum=$((byteSum+byteCount))
 done
 
