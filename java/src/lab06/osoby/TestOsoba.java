@@ -1,4 +1,4 @@
-package lab06;
+package lab06.osoby;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,8 +13,8 @@ public class TestOsoba {
       {
         add(new Osoba("Kowalski", LocalDate.of(1999, 5, 12)));
         add(new Osoba("Kowalski", LocalDate.of(1998, 5, 12)));
-        add(new Osoba("Nowak", LocalDate.of(1999, 5, 12)));
-        add(new Osoba("Test", LocalDate.of(1999, 5, 12)));
+        add(new Osoba("Nowak", LocalDate.of(1997, 5, 12)));
+        add(new Osoba("Test", LocalDate.of(1996, 5, 12)));
         add(new Osoba("asd", LocalDate.of(1999, 6, 12)));
       }
     };

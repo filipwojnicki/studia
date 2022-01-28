@@ -1,4 +1,4 @@
-package lab06;
+package lab06.osoby;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
