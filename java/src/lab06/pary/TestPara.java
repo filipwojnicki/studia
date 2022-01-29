@@ -23,13 +23,17 @@ public class TestPara
         System.out.println(ArrayUtil.isSorted(unsorted));
 
         ArrayList<Integer> test = new ArrayList<Integer>();
-        ArrayList<Integer> test1 = new ArrayList<Integer>();
         test.add(1);
         test.add(2);
 
+        ArrayList<Integer> test1 = new ArrayList<Integer>();
+        ArrayList<Integer> test2 = new ArrayList<Integer>();
+
         test1 = ArrayUtil.copy(test);
+        test2 = ArrayUtil.copy(test);
 
         System.out.println(ArrayUtil.copy(test1));
+        System.out.println(ArrayUtil.copy(test2));
     }
 }
 
@@ -44,8 +48,13 @@ class ArrayUtil {
     return true;
   }
 
-  public static <T extends Comparable<T>> ArrayList copy(ArrayList<? extends T> array) {
+  public static <T> ArrayList copy(ArrayList<? extends T> array) {
     ArrayList<? extends T> copiedArr = array;
+    return copiedArr;
+  }
+
+  public static <T> ArrayList copyDup(ArrayList<? super T> array) {
+    ArrayList<? super T> copiedArr = array;
     return copiedArr;
   }
 }
