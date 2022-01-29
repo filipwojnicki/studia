@@ -33,7 +33,9 @@ public class TestPara
         test2 = ArrayUtil.copy(test);
 
         System.out.println(ArrayUtil.copy(test1));
-        System.out.println(ArrayUtil.copy(test2));
+        System.out.println(ArrayUtil.copyDup(test2));
+
+        System.out.println(ArrayUtil.binSearch(sorted, 3));
     }
 }
 
@@ -56,6 +58,22 @@ class ArrayUtil {
   public static <T> ArrayList copyDup(ArrayList<? super T> array) {
     ArrayList<? super T> copiedArr = array;
     return copiedArr;
+  }
+
+  public static <T extends Comparable<T>> int binSearch(T[] array, T value) {
+    int low = 0;
+    int high = array.length - 1;
+
+    while (low <= high) {
+        int mid = (low + high) / 2;
+        int result = value.compareTo(array[mid]);
+
+        if      (result < 0) high = mid - 1;
+        else if (result > 0) low = mid + 1;
+        else return mid;
+    }
+
+    return -1;
   }
 }
 
