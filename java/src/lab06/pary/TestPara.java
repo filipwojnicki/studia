@@ -1,5 +1,6 @@
 package lab06.pary;
 
+import java.util.ArrayList;
 
 public class TestPara
 {
@@ -20,6 +21,15 @@ public class TestPara
 
         System.out.println(ArrayUtil.isSorted(sorted));
         System.out.println(ArrayUtil.isSorted(unsorted));
+
+        ArrayList<Integer> test = new ArrayList<Integer>();
+        ArrayList<Integer> test1 = new ArrayList<Integer>();
+        test.add(1);
+        test.add(2);
+
+        test1 = ArrayUtil.copy(test);
+
+        System.out.println(ArrayUtil.copy(test1));
     }
 }
 
@@ -32,6 +42,11 @@ class ArrayUtil {
     }
 
     return true;
+  }
+
+  public static <T extends Comparable<T>> ArrayList copy(ArrayList<? extends T> array) {
+    ArrayList<? extends T> copiedArr = array;
+    return copiedArr;
   }
 }
 
