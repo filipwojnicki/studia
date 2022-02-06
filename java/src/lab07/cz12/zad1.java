@@ -23,7 +23,7 @@ public class zad1 {
   public static void redukuj(LinkedList<String> pracownicy, int n) {
     for (int i = pracownicy.size() - 1; i >= 0; i--) {
       if(i % n == 0) {
-        pracownicy.remove(pracownicy.get(i));
+        pracownicy.remove(i);
       }
     }
   }
