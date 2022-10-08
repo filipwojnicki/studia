@@ -15,21 +15,23 @@ void showDistance(double distance, int seconds) {
   }
 }
 
-void showDistanceToGround(int tower, int i) {
-  double distanceFallen = tower - distance(i);
-  showDistance(distanceFallen, i);
-  i++;
+void showDistanceToGround(int tower, int seconds) {
+  double distanceFallen = tower - distance(seconds);
+  showDistance(distanceFallen, seconds);
+  
   if(distanceFallen > 0) {
-    showDistanceToGround(tower, i);
+    seconds++;
+    showDistanceToGround(tower, seconds);
+  } else {
+    cout << "W " << seconds << " piłka spadła na ziemie.";
   }
 }
 
 int main() {
   int tower;
-  int i = 0;
+  int seconds = 0;
   cout << "Wpisz wysokość wiezy w metrach: ";
   cin >> tower;
 
-  showDistanceToGround(tower, i);
-  cout << "Piłka spadła na ziemie.";
+  showDistanceToGround(tower, seconds);
 }
