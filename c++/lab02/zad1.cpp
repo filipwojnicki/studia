@@ -56,12 +56,24 @@ string KontoBankowe::getData() {
 
 int main() {
   KontoBankowe konto("Jan", "9887765", 100.10);
-  cout << konto.getData() << endl;
+
+  KontoBankowe* konta[3];
+  konta[0] = &konto;
+  konta[1] = new KontoBankowe("Piotr", "23545453", 21.54);
+  konta[2] = new KontoBankowe("Andrzej", "345454", 56.67);
+
+  konta[1]->wyplata(2.34);
+
+  cout << konta[0]->getData() << endl;
+  cout << konta[1]->getData() << endl;
+  cout << konta[2]->getData() << endl;
+
   konto.setDepozytariusz("Filip");
   konto.setNumerKonta("123456789");
   konto.setSaldo(12.12);
   konto.wplata(13.02);
   konto.wyplata(26.02);
   cout << konto.getData() << endl;
+
   return( 0 );
 }
