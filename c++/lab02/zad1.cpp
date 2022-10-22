@@ -12,6 +12,7 @@ class KontoBankowe {
     void wyplata(float wyplataSaldo);
     string getData();
     KontoBankowe(string depozytariusz = "", string numerKonta = "", float saldo = 0.0);
+    static int count;
     
   private:
     string depozytariusz;
@@ -23,7 +24,10 @@ KontoBankowe::KontoBankowe(string depozytariusz, string numerKonta, float saldo)
   this->depozytariusz = depozytariusz;
   this->numerKonta = numerKonta;
   this->saldo = saldo;
+  this->count += 1;
 }
+
+int KontoBankowe::count = 0;
 
 void KontoBankowe::setDepozytariusz(string depozytariusz) {
   this->depozytariusz = depozytariusz;
@@ -74,6 +78,8 @@ int main() {
   konto.wplata(13.02);
   konto.wyplata(26.02);
   cout << konto.getData() << endl;
+
+  cout << "Liczba: " << KontoBankowe::count << endl;
 
   return( 0 );
 }
